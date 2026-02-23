@@ -69,7 +69,7 @@ description: >
 
 ### 2026.3.3 배포 예정: 금팔기 통합 ("커넥트")
 - GDD/GDC → 커넥트로 통합
-- 기존 GDC 퍼널 문제(4.4% 완료율) 해결 목표
+- 기존 GDC 퍼널 완료율 저조 문제 해결 목표 (수치는 DA 참조)
 
 ### 예정: 홈 화면 URL 분리
 - /home → /home/member, /home/new, /home/guest
