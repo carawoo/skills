@@ -102,7 +102,7 @@ Footer (1080x128, fill none, horizontal, space-between, center, padding 30 40 / 
 
 ### 8. Closing (항상 마지막)
 - Inner Gold Frame (#FCD564, radius 80)
-- Glow Circle (990x990, #FFBB1C 60%, blur 300)
+- Glow Circle (990x990, #FFBB1C 60%, blur 150)
 - Content (1080x1440, fill none, vertical, space-between, center, padding **400**/120, gap auto)
 - Component 2 SVG (171x258, #474747) — 사이즈 변경 금지
 - Closing Title: LINEAR 그라디언트 #424242→#FFBE00 상→하
@@ -110,7 +110,7 @@ Footer (1080x128, fill none, horizontal, space-between, center, padding 30 40 / 
 
 ### 9. Cover Title
 - Title Line 1: Pretendard Variable Regular 120px, **#424242 솔리드**
-- Title Line 2-3: Pretendard Variable ExtraBold 120px, 라디얼 그라디언트
+- Title Line 2-3: Pretendard Variable ExtraBold 120px, LINEAR 그라디언트 #424242→#FFBE00 상→하
 
 ### 10. Template E Title
 - Pretendard Variable ExtraBold 64px, **#424242 솔리드**
