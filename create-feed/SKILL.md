@@ -95,10 +95,12 @@ Footer (1080x128, fill none, horizontal, space-between, center, padding 30 40 / 
 - Template B: radius **82px**, stroke #FCD564 4px, width 920
 - Step Card: radius **36px**, stroke 없음
 
-### 7. Badge 규칙
-- **정원형 필수** (가로 = 세로)
+### 7. Badge 규칙 (반드시 준수)
+- **정원형 절대 필수** — 가로값 = 세로값 항상 동일. 세로가 다르면 가로값에 맞춰 즉시 세로 resize
 - Template B: 80x80, #FCD564, radius 80
 - Template E: 68x68, #DB6E00, radius 34
+- Badge 생성 직후 반드시 resize_node(width, width)로 정원형 확인
+- auto layout에 의해 세로가 줄어들 수 있으므로 생성 후 무조건 resize 호출
 
 ### 8. Closing (항상 마지막)
 - Inner Gold Frame (#FCD564, radius 80)
@@ -127,11 +129,13 @@ Footer (1080x128, fill none, horizontal, space-between, center, padding 30 40 / 
 - 상승: #FA4444 (빨강)
 - #000000 절대 금지
 
-### 13. 프레임 생성 직후 체크
-- [ ] fill 제거했는지
-- [ ] width 1080 맞췄는지
+### 13. 프레임 생성/복제 직후 체크 (매번 반드시)
+- [ ] fill 제거했는지 (레이아웃 프레임)
+- [ ] width 1080 맞췄는지 (Header, Title Area, Cards/Steps Section, **Footer** 전부)
 - [ ] Header 좌측이 텍스트 그룹인지
-- [ ] Badge 정원형인지
+- [ ] Badge 정원형인지 (가로=세로, resize_node 호출)
+- [ ] **Footer width 1080인지** — clone_node 후 auto layout이 hug로 줄어드므로 반드시 resize
+- [ ] clone_node 사용 시 모든 자식의 width/height 재확인
 
 ---
 

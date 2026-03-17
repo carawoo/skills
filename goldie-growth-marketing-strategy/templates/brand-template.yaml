@@ -1,0 +1,202 @@
+# Meta Ads Performance Strategy - Brand Information Template
+
+# 기본 정보
+brand:
+  name: "금골디"  # 브랜드명
+  description: "금 거래 + 앱테크 통합 플랫폼"
+  website: "https://goldy.app"
+  
+# 색상 팔레트
+colors:
+  primary: "#FCD564"  # 프리미엄 골드
+  primary_name: "프리미엄 골드"
+  
+  secondary: "#FFFFFF"  # 배경
+  secondary_name: "흰색"
+  
+  accent_1: "#A4D65E"  # 라임 그린 (앱테크)
+  accent_1_name: "라임 그린"
+  
+  accent_2: "#87CEEB"  # 라이트 블루 (금 판매)
+  accent_2_name: "라이트 블루"
+  
+  text_dark: "#333333"  # 다크 텍스트
+  text_light: "#666666"  # 라이트 텍스트
+  
+  background_light: "#F5F5F5"  # 라이트 그레이
+
+# 톤앤매너
+tone_and_manner:
+  primary_style: "친근한 전문가 스타일"
+  characteristics:
+    - "따뜻하고 신뢰감 있음"
+    - "게임화 요소 (앱테크)"
+    - "금융 신뢰성 (금 판매)"
+    - "쉬운 언어 사용"
+    - "긍정적 메시지"
+
+# 타이포그래피
+typography:
+  headline_font: "Playfair Display"
+  headline_weight: "Bold"
+  headline_size: "40-48px"
+  
+  body_font: "Noto Sans KR"
+  body_weight: "Regular"
+  body_size: "16px"
+  
+  cta_font: "Noto Sans KR"
+  cta_weight: "Bold"
+  cta_size: "18px"
+
+# 캠페인 정보
+campaign:
+  type: "퍼포먼스 마케팅"
+  platform: "Meta (Facebook, Instagram)"
+  
+  # 비즈니스 모델
+  business_model:
+    app_tech_ratio: 30  # 앱테크 비중 (%)
+    gold_sales_ratio: 70  # 금 판매 비중 (%)
+  
+  # 교환 기준
+  exchange_rate:
+    points_for_01g: 100000  # 0.1g 교환에 필요한 포인트
+    points_for_1g: 1000000  # 1g 교환에 필요한 포인트
+    minimum_exchange: "0.1g"  # 최소 교환 단위
+  
+  # 예상 수익
+  expected_earnings:
+    daily_ads: 10  # 일일 광고 시청 개수
+    points_per_ad: 500  # 광고당 포인트
+    monthly_points: 150000  # 월간 획득 포인트
+    monthly_gold: "0.15g"  # 월간 획득 금
+    annual_gold: "1.8g"  # 연간 획득 금
+    annual_value_krw: 450000  # 연간 가치 (원)
+
+# 타겟 세그먼트
+target_segments:
+  app_tech:
+    age_min: 20
+    age_max: 35
+    characteristics:
+      - "게임/앱 사용 경험 많음"
+      - "포인트 앱테크 경험자"
+      - "게임화 선호"
+      - "즉시 보상 추구"
+    psychology:
+      - "게임화"
+      - "누적의 기쁨"
+      - "즉각적 보상"
+  
+  gold_sales:
+    age_min: 26
+    age_max: 50
+    characteristics:
+      - "금 보유 경험 있음"
+      - "자산 관리 관심"
+      - "신뢰 중시"
+      - "장기 자산 추구"
+    psychology:
+      - "손실 회피"
+      - "신뢰감"
+      - "안정성"
+
+# 광고 세트 구성
+ad_sets:
+  new_users:
+    name: "신규 사용자"
+    age_min: 20
+    age_max: 35
+    budget_monthly: 15000000  # 월 예산 (원)
+    copy_categories:
+      - "숫자형"
+      - "무자본형"
+      - "루틴형"
+  
+  existing_users:
+    name: "기존 앱테크 사용자"
+    age_min: 25
+    age_max: 40
+    budget_monthly: 15000000
+    copy_categories:
+      - "비교형"
+      - "실험형"
+  
+  gold_interest:
+    name: "금 관심층"
+    age_min: 26
+    age_max: 50
+    budget_monthly: 15000000
+    copy_categories:
+      - "비교형"
+      - "루틴형"
+      - "사회적증거형"
+  
+  retargeting:
+    name: "리타겟팅"
+    age_min: 20
+    age_max: 50
+    budget_monthly: 5000000
+    copy_categories:
+      - "실험형"
+      - "컨텐츠형"
+
+# KPI 목표
+kpi:
+  ctr: 3.0  # 클릭율 (%)
+  conversion_rate: 2.0  # 전환율 (%)
+  cpc: 500  # 클릭당 비용 (원)
+  cpa: 10000  # 고객획득비 (원)
+  roas: 3.0  # 광고수익률
+  ltvs: 100000  # 고객생애가치 (원)
+
+# 규제 및 준수
+compliance:
+  regulatory_bodies:
+    - "금융감독청(FSC)"
+    - "공정거래위원회(FTC)"
+    - "광고표준협회(ASA)"
+  
+  restricted_expressions:
+    - "최고", "가장", "최상"
+    - "월 10만원 이상"
+    - "수익 보장"
+    - "절대 손실 없음"
+  
+  required_disclosures:
+    - "위험 고지"
+    - "근거 데이터"
+    - "조건 명시"
+
+# 제작 일정
+production_timeline:
+  week_1: "기획 검토 + 3D 모델 제작"
+  week_2: "3D 애니메이션 제작"
+  week_3: "그래픽 디자인 + 텍스트 배치"
+  week_4: "렌더링 + 최적화 + 검수"
+  total_weeks: 4
+
+# 기술 스펙
+technical_specs:
+  image_ads:
+    resolution: "1080x1920px"
+    format: "PNG/JPG"
+    file_size_max: "500KB"
+    color_mode: "RGB"
+  
+  video_ads:
+    resolution: "1080x1920px"
+    frame_rate: 60
+    duration_min: 4
+    duration_max: 8
+    file_size_max: "2.5MB"
+    format: "MP4"
+    codec: "H.264"
+  
+  carousel_ads:
+    resolution: "1080x1920px"
+    cards_min: 3
+    cards_max: 5
+    format: "PNG/JPG"
+    file_size_per_card: "500KB"
