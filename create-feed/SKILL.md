@@ -94,7 +94,13 @@ description: >
    │  │  └─ 카테고리 (Pretendard Variable ExtraBold 36px, #424242)
    │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
    │  └─ Tag (Pretendard Variable Medium 48px, CENTER, #424242, width 840)
-   ├─ Cards Container (1080x~700, y=420)
+   ├─ Cards Container (1080x~926, y=335, padding 0/80, gap 28, VERTICAL CENTER)
+   │  │  shadow: drop-shadow(0 8 20 rgba(237,146,43,0.2))
+   │  ├─ Card (920x275, bg rgba(255,255,255,0.92), radius 50, padding 50/60, gap 16, VERTICAL CENTER)
+   │  │  ├─ Label (Pretendard Regular 34px, #424242)
+   │  │  ├─ Value (Pretendard Bold 48px, #333333)
+   │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
+   │  └─ ... (Card 2, Card 3 동일 구조)
    ├─ Footer (1080x128, fill none, y=1312)
    │  ├─ "Weekly" (Montserrat SemiBold 36px, #424242, opacity 0.2)
    │  ├─ Divider (2x34, #424242, opacity 0.2)
@@ -121,8 +127,13 @@ description: >
 
 ### Width 규칙
 - Title Section, Cards Container, Footer: **1080px**
-- Card: **920px**, radius 82px, stroke #FCD564 4px
+- Card (비교/데이터형): **920px**, radius **50px**, bg rgba(255,255,255,0.92), padding 50/60, gap 16
+- Card (faq/step형): **920px**, radius 50px, stroke #FCD564 4px, bg #FFFFFF
 - Step Card: radius 36px, stroke 없음
+
+### Desc 색상 규칙
+- 비교형 카드 Desc: **#676767** (연한 회색)
+- 일반 카드 Desc: #333333 또는 #3741F2 (강조)
 
 ### Closing — 반드시 wn-closing(601:6584) 클론
 - clone_node로 복제 — 직접 빌드 금지
@@ -144,10 +155,18 @@ description: >
 - 하락: #3741F2 / 상승: #FA4444
 - #000000 절대 금지
 
+### 폰트 사이즈 규칙 (1080x1440 프레임)
+- **Step Desc / Card Desc (설명 텍스트): 38px** (28px/32px 금지 — 모바일에서 너무 작음)
+- **Label: 34px** (28px 금지)
+- Step Title: 40px
+- Card Title (Value): 44~56px
+- Tag: 48px
+- Title: 64px
+
 ### 혼합 폰트 텍스트 교체
 - `set_text_content` 전에 반드시 `set_font_name`으로 폰트 통일
 - 헤드라인: Pretendard Variable ExtraBold
-- 본문: Pretendard Regular
+- 본문: Pretendard Regular 38px
 - 서브: Pretendard Variable Medium
 - Footer: Montserrat SemiBold / Regular
 
