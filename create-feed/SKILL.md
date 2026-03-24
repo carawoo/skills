@@ -93,7 +93,7 @@ description: >
    │  ├─ Pill Badge (#FCD15A, radius 50, auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40)
    │  │  └─ 카테고리 (Pretendard Variable ExtraBold 36px, #424242)
    │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
-   │  └─ Tag (Pretendard Variable Medium 48px, CENTER, #424242, width 840)
+   │  └─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
    ├─ Cards Container (1080x~926, y=335, padding 0/80, gap 28, VERTICAL CENTER)
    │  │  shadow: drop-shadow(0 8 20 rgba(237,146,43,0.2))
    │  ├─ Card (920x275, bg rgba(255,255,255,0.92), radius 50, padding 50/60, gap 16, VERTICAL CENTER)
@@ -160,7 +160,7 @@ description: >
 - **Label: 34px** (28px 금지)
 - **Step Title: 45px** (40px 금지)
 - Card Title (Value): 44~56px
-- Tag: 48px
+- **Tag: 46px** (48px 금지)
 - Title: 64px
 
 ### 혼합 폰트 텍스트 교체
