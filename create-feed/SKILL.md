@@ -97,7 +97,7 @@ description: >
    ├─ Cards Container (1080x~926, y=335, padding 0/80, gap 28, VERTICAL CENTER)
    │  │  shadow: drop-shadow(0 8 20 rgba(237,146,43,0.2))
    │  ├─ Card (920x275, bg rgba(255,255,255,0.92), radius 50, padding 50/60, gap 16, VERTICAL CENTER)
-   │  │  ├─ Label (Pretendard Regular 34px, #424242)
+   │  │  ├─ Label (Pretendard Bold 34px, #424242)
    │  │  ├─ Value (Pretendard Bold 48px, #333333)
    │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
    │  └─ ... (Card 2, Card 3 동일 구조)
@@ -179,7 +179,7 @@ description: >
 
 ### 폰트 사이즈 규칙 (1080x1440 프레임)
 - **Step Desc / Card Desc (설명 텍스트): 38px** (28px/32px 금지 — 모바일에서 너무 작음)
-- **Label: 34px** (28px 금지)
+- **Label: Pretendard Bold 34px** (Regular 금지, 28px 금지)
 - **Step Title: 45px** (40px 금지)
 - Card Title (Value): 44~56px
 - **Tag: 46px** (48px 금지)
