@@ -158,7 +158,7 @@ description: >
 ### 폰트 사이즈 규칙 (1080x1440 프레임)
 - **Step Desc / Card Desc (설명 텍스트): 38px** (28px/32px 금지 — 모바일에서 너무 작음)
 - **Label: 34px** (28px 금지)
-- Step Title: 40px
+- **Step Title: 45px** (40px 금지)
 - Card Title (Value): 44~56px
 - Tag: 48px
 - Title: 64px
