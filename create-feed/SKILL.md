@@ -63,9 +63,27 @@ description: >
 
 ---
 
-## 콘텐츠 프레임 구조 (Section 9 패턴) — 필수 준수
+## 프레임 구조 — 필수 준수
 
-모든 콘텐츠 프레임(커버/클로징 제외)은 이 구조를 따른다:
+### 커버 프레임 구조 (faq-cover / wn-cover / Cover(골드))
+
+> **Inner Gold Frame은 커버의 핵심 요소. 절대 빠뜨리지 말 것.**
+
+```
+최상위 프레임 (1080x1440, #FFFFFF)
+└─ Inner Gold Frame (1080x1440, #FCD564, radius 80) ← 필수!
+   ├─ Glow Circle (861x861, #FFBB1C, opacity 0.6)
+   ├─ Title Group (850x~264, CENTER)
+   │  ├─ Title Line 1 (Pretendard Variable Regular 100~120px, #424242)
+   │  └─ Title Line 2-3 (Pretendard Variable ExtraBold 120px, #424242)
+   ├─ Footer (1080x226)
+   │  └─ Footer Text Group ("FAQ | 금골디" 또는 "Weekly | 금골디")
+   └─ 이미지 (하단 제품 이미지)
+```
+
+**커버 생성 시 반드시 clone_node 사용** — 직접 빌드 시 Inner Gold Frame 누락 위험.
+
+### 콘텐츠 프레임 구조 (커버/클로징 제외)
 
 ```
 최상위 프레임 (1080x1440, #FFFFFF)
@@ -81,7 +99,7 @@ description: >
    │  ├─ "Weekly" (Montserrat SemiBold 36px, #424242, opacity 0.2)
    │  ├─ Divider (2x34, #424242, opacity 0.2)
    │  └─ "금골디" (Montserrat Regular 36px, #424242, opacity 0.2)
-   └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 클로징 직전 프레임에만!
+   └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
 ```
 
 ### Title Section 생성
@@ -134,13 +152,15 @@ description: >
 - Footer: Montserrat SemiBold / Regular
 
 ### 프레임 생성 직후 체크
-- [ ] Inner Frame (#FEFAEE, radius 80)
+- [ ] **커버: Inner Gold Frame (#FCD564, radius 80) 존재 확인** ← 최우선
+- [ ] 콘텐츠: Inner Frame (#FEFAEE, radius 80)
 - [ ] Title Section (Pill + Title + Tag)
 - [ ] Footer 하단 (y=1312)
-- [ ] CTA Bar 클로징 직전에만
+- [ ] CTA Bar 마지막 카드에만
 - [ ] Badge 정원형
 - [ ] 폰트 Pretendard Variable (Inter 아닌지)
 - [ ] width 1080
+- [ ] 줄바꿈: `\n` 사용 금지 → 실제 엔터로 줄바꿈
 
 ---
 
