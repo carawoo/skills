@@ -74,8 +74,8 @@ description: >
 └─ Inner Gold Frame (1080x1440, #FCD564, radius 80) ← 필수!
    ├─ Glow Circle (861x861, #FFBB1C, opacity 0.6)
    ├─ Title Group (850x~264, CENTER)
-   │  ├─ Title Line 1 (Pretendard Variable Regular 100~120px, #424242)
-   │  └─ Title Line 2-3 (Pretendard Variable ExtraBold 120px, #424242)
+   │  ├─ Title Line 1 (Pretendard Variable Regular 90px, #424242)
+   │  └─ Title Line 2-3 (Pretendard Variable ExtraBold 100px, #424242)
    ├─ Footer (1080x226)
    │  └─ Footer Text Group ("FAQ | 금골디" 또는 "Weekly | 금골디")
    └─ 이미지 (하단 제품 이미지)
@@ -98,10 +98,11 @@ description: >
    │  ├─ Pill Badge (#FCD15A, radius 50, auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40)
    │  │  └─ 카테고리 (Pretendard Variable ExtraBold 36px, #424242)
    │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
-   │  └─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
-   ├─ Cards Container (1080x~926, y=335, padding 0/80, gap 28, VERTICAL CENTER)
+   │  ├─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
+   │  └─ Subtitle (Pretendard Variable Regular 44px, #333333, width 920) ← wn 템플릿
+   ├─ Cards Container (1080x~926, y=335, padding 0/60, gap 28, VERTICAL CENTER)
    │  │  shadow: drop-shadow(0 8 20 rgba(237,146,43,0.2))
-   │  ├─ Card (920x275, bg rgba(255,255,255,0.92), radius 50, padding 50/60, gap 16, VERTICAL CENTER)
+   │  ├─ Card (fill parent, bg rgba(255,255,255,0.92), radius 60, padding 50/60, gap 16, VERTICAL CENTER, stroke 없음)
    │  │  ├─ Label (Pretendard Bold 34px, #424242)
    │  │  ├─ Value (Pretendard Bold 48px, #333333)
    │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
@@ -133,7 +134,7 @@ description: >
 ### 1080 기준 통일 체크리스트
 - [ ] 프레임: 1080x1440
 - [ ] Inner Frame / Inner Gold Frame: 1080x1440, radius **80**
-- [ ] Card: 920px, radius **50**
+- [ ] Card: fill parent (960px), radius **60**, stroke 없음
 - [ ] Step Card: radius **36** (또는 50)
 - [ ] Pill Badge: radius **50**
 - [ ] Title: **64px** / Tag: **46px** / Step Title: **45px**
@@ -151,8 +152,8 @@ description: >
 
 ### Width 규칙
 - Title Section, Cards Container, Footer: **1080px**
-- Card (비교/데이터형): **920px**, radius **50px**, bg rgba(255,255,255,0.92), padding 50/60, gap 16
-- Card (faq/step형): **920px**, radius 50px, stroke #FCD564 4px, bg #FFFFFF
+- Card (비교/데이터형): **fill parent (960px)**, radius **60px**, bg rgba(255,255,255,0.92), padding 50/60, gap 16, stroke 없음
+- Card (faq/step형): **fill parent (960px)**, radius 60px, stroke 없음, bg #FFFFFF
 - Step Card: radius 36px, stroke 없음
 
 ### Desc 색상 규칙
@@ -165,8 +166,8 @@ description: >
 - Component 2 SVG (171x258) 사이즈 변경 금지
 
 ### Cover Title
-- Line 1: Pretendard Variable Regular 120px, #424242
-- Line 2-3: Pretendard Variable ExtraBold 120px, 그라디언트 #424242→#FFBE00
+- Line 1: Pretendard Variable Regular **90px**, #424242
+- Line 2-3: Pretendard Variable ExtraBold **100px**, 그라디언트 #424242→#FFBE00
 
 ### Badge
 - 정원형 필수 (가로=세로), 생성 후 resize_node 호출
