@@ -187,7 +187,7 @@ description: >
 - **Step Desc / Card Desc (설명 텍스트): 38px** (28px/32px 금지 — 모바일에서 너무 작음)
 - **Label: Pretendard Bold 34px** (Regular 금지, 28px 금지)
 - **Step Title: 45px** (40px 금지)
-- Card Title (Value): 44~56px
+- Card Title (Value): **44px** (Pretendard Variable Bold, 통일)
 - **Tag: 46px** (48px 금지)
 - Title: 64px
 
