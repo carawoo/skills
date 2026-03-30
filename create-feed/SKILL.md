@@ -136,10 +136,10 @@ description: >
 - Pill Badge: auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40
 - **폰트 생성 후 반드시 `set_font_name`** — 기본 Inter 방지
 
-### 그래프 컨테이너 (Frame 1261157381)
-- 그래프/차트 이미지가 들어가는 프레임
-- 좌우 패딩: **40px** (기존 20px에서 변경)
-- auto layout: VERTICAL, paddingLeft 40, paddingRight 40
+### 콘텐츠 컨테이너 좌우 패딩 규칙
+- **모든 콘텐츠 컨테이너 좌우 패딩: 40px**
+- 그래프 컨테이너 (Frame 1261157381): paddingLeft 40, paddingRight 40
+- 전문가 카드 컨테이너 (Frame 1261157364 / center-contents): paddingLeft 40, paddingRight 40
 
 ### 표준 Footer (1080x1440 프레임 공통)
 모든 1080x1440 콘텐츠 프레임에 동일하게 적용한다.
