@@ -190,6 +190,20 @@ Footer (1080x128, position absolute, y=1312)
 ```
 - 다크 배경(wn-00 하락, wn-05 전문가) 프레임에서는 텍스트 #FFFFFF, divider #FFFFFF
 
+### 관전포인트 리스트 (wn-06)
+```
+Frame 1261157395 (1080x870, bg #FFFFFF)
+├─ auto layout: VERTICAL, SPACE_BETWEEN
+├─ padding: 70px 0px
+├─ 리스트 아이템 (1080x181, padding 36px 0, gap 10, CENTER)
+│  ├─ 제목 (Pretendard Variable Bold 46px, #222222, line-height 100%)
+│  └─ 설명 (Pretendard Regular 38px, #111111, line-height 140%)
+├─ Divider (1080x0, 1px solid #575757, opacity 0.2)
+├─ 리스트 아이템 (동일)
+├─ Divider
+└─ 리스트 아이템 (마지막 — 제목 ExtraBold #DB6E00)
+```
+
 ### CTA Bar
 - **클로징 직전 마지막 콘텐츠 프레임에만** 적용
 - position: absolute, x=1, y=1304
