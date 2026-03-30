@@ -159,6 +159,22 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
 - 그래프 컨테이너 (Frame 1261157381): paddingLeft 40, paddingRight 40
 - 전문가 카드 컨테이너 (Frame 1261157364 / center-contents): paddingLeft 40, paddingRight 40
 
+### 커버 Footer (wn-00 전용)
+커버 프레임에만 적용되는 별도 Footer. 일반 콘텐츠 Footer와 다름.
+```
+Footer (1080x226, position absolute, y=1214)
+├─ auto layout: HORIZONTAL, SPACE_BETWEEN, CENTER
+├─ padding: 62px 125px 83px
+├─ border-top: 1px solid rgba(255,255,255,0.15)
+├─ Footer Text Group (442x36, gap 28)
+│  ├─ "WEEKLY REPORT" (Montserrat SemiBold 36px, #FFFFFF)
+│  ├─ Divider (2x34, rgba(255,255,255,0.2))
+│  └─ "금골디" (Montserrat Regular 36px, #FFFFFF)
+└─ Logo Emblem (80x80)
+   └─ emblem vectors: 골드 (#FCD564, #EEB825)
+```
+- 다크 커버(하락)에서도 동일 (텍스트 #FFFFFF, 로고 골드)
+
 ### 표준 Footer (1080x1440 프레임 공통)
 모든 1080x1440 콘텐츠 프레임에 동일하게 적용한다.
 ```
