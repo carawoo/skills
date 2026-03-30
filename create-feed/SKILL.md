@@ -131,9 +131,8 @@ description: >
 ```
 
 ### Title Section 생성 (Frame 1261157357)
-- auto layout: VERTICAL, CENTER/CENTER, padding **208**/62/125/125, gap 42 (1080 기준)
-- 520 기준 원본: padding 100/30/60/60, gap 20
-- **상단 패딩 208px (520 기준 100px)** — 이전 56px에서 변경됨
+- auto layout: VERTICAL, CENTER/CENTER, padding **100**/30/60/60, gap 20
+- **상단 패딩 100px** — 이전 56px에서 변경됨 (1080 기준 그대로 100px)
 - Pill Badge: auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40
 - **폰트 생성 후 반드시 `set_font_name`** — 기본 Inter 방지
 
