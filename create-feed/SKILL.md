@@ -65,9 +65,24 @@ description: >
 
 ### 전문가 전망 프레임 (wn-05)
 - 기관 전망/전문가 의견이 포함될 때 반드시 사용
-- 다크 배경 #383632, 2x2 카드 그리드
-- 카드: rgba(255,255,255,0.1), radius 37 (1080 기준)
-- 가격 텍스트: Montserrat ExtraBold 83px, 골드 그라디언트
+- 다크 배경 #383632, innerframe radius 80, clip content ON
+```
+center-contents (1080x850, padding 10/10/40/40, gap 30)
+├─ drop-shadow(0 2 10 rgba(174,128,0,0.1))
+├─ primaryAxis: CENTER, counterAxis: CENTER
+└─ Frame 1261157392 (fill width, gap 20)
+   ├─ cards row (fill width, HORIZONTAL CENTER, gap 20)
+   │  ├─ card (flex-grow 1, rgba(255,255,255,0.1), radius 37)
+   │  │  ├─ padding: 26/26/24/24, gap 30
+   │  │  ├─ primaryAxis: CENTER, counterAxis: CENTER
+   │  │  ├─ 은행명 (Pretendard Variable Bold 46px, #FFFFFF, line-height 100%)
+   │  │  ├─ divider (fill width, 1px #FFFFFF op 0.2)
+   │  │  └─ price area (fill width, VERTICAL CENTER, gap 20)
+   │  │     ├─ 가격 (Montserrat ExtraBold 83px, gradient #FFBE00→#FEFAEE, line-height 100%)
+   │  │     └─ 라벨 (Pretendard Variable Regular 31px, #FFFFFF op 0.8, line-height 100%)
+   │  └─ card (동일 구조)
+   └─ cards row (동일 구조)
+```
 
 ### 콘텐츠 유형별 매핑
 
@@ -133,6 +148,7 @@ description: >
 ### Title Section 생성 (Frame 1261157357)
 - auto layout: VERTICAL, CENTER/CENTER, padding **100**/30/60/60, gap 20
 - **상단 패딩 100px** — 이전 56px에서 변경됨 (1080 기준 그대로 100px)
+- **위클리 헤더 타이틀: 80px** (1080x1440 프레임 전체 통일, 66px 금지)
 - Pill Badge: auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40
 - **폰트 생성 후 반드시 `set_font_name`** — 기본 Inter 방지
 
