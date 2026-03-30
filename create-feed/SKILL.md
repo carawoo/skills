@@ -33,22 +33,41 @@ description: >
 
 ## Figma 소스 템플릿 (클론 전용)
 
-| 템플릿 | Figma ID | 사이즈 | 위치 |
-|--------|----------|--------|------|
-| wn-cover | 601:6581 | 1080x1440 | Section 8 |
-| wn-02 (데이터) | 601:6692 | 1080x1440 | Section 8 |
-| wn-03 (분석) | 601:6693 | 1080x1440 | Section 8 |
-| wn-closing | 601:6584 | 1080x1440 | Section 8 |
-| faq-cover | 640:788 | 1080x1440 | faq-피드발행완료 |
-| faq-02~06 | 640:789~870 | 1080x1440 | faq-피드발행완료 |
-| Cover (골드) | 846:838 | 1080x1440 | 페이지 루트 |
-| close | 869:5288 | 1080x1440 | 페이지 루트 |
+| 템플릿 | Figma ID | 사이즈 | 위치 | 용도 |
+|--------|----------|--------|------|------|
+| wn-00 (커버 상승) | 444:911 | 520x675→1080x1440 | 위클리(601:6894) | 주간 상승 시 |
+| wn-00 (커버 하락) | 444:1057 | 520x675→1080x1440 | 위클리(601:6894) | 주간 하락 시 (다크 #383838) |
+| wn-01 (그래프) | 590:4094 | 520x675→1080x1440 | 위클리(601:6894) | 주간 시세 차트 |
+| wn-02~04 (카드) | 590:4151~4265 | 520x675→1080x1440 | 위클리(601:6894) | 데이터/뉴스 카드 |
+| wn-05 (전문가) | 591:4547 | 520x675→1080x1440 | 위클리(601:6894) | 기관 전망 (다크 #383632) |
+| wn-06 (다음주) | 590:4321 | 520x675→1080x1440 | 위클리(601:6894) | 다음 주 관전포인트 |
+| wn-07 (클로징) | 590:4377 | 520x675→1080x1440 | 위클리(601:6894) | 클로징 |
+| Cover (골드) | 846:838 | 1080x1440 | 페이지 루트 | faq/일반 커버 |
+| close | 869:5288 | 1080x1440 | 페이지 루트 | 일반 클로징 |
+| faq-cover | 640:788 | 1080x1440 | faq-피드발행완료 | FAQ 커버 |
+| faq-02~06 | 640:789~870 | 1080x1440 | faq-피드발행완료 | FAQ 본문 |
+
+### 520→1080 스케일 규칙
+- 클론 후 반드시 1080x1440으로 resize (비율 2.077x)
+- 코너 래디어스: 40→**80**, 18→**37**, 30→**62**
+- 폰트: 32→**66**, 22→**46**, 18→**38**, 15→**31**, 40→**83**, 16→**33**
+- Footer: POST3_cover(846:838) 기준 — 1080x226, 텍스트 x=125, 로고 x=875, 80x80
 
 ### 세트 구성
 
+**위클리:** wn-00(커버) → wn-01(그래프) → wn-02~04(카드 2~3장) → wn-05(전문가전망) → wn-07(클로징)
 **피드형:** Cover → Content(wn/faq 혼합) x2~4 → Closing
-**위클리:** wn-cover → wn-02 → wn-03 → wn-closing
 **FAQ형:** faq-cover → faq-03/04/05 x2~3 → Closing
+
+### 위클리 커버 분기
+- **주간 상승:** wn-00 상승 (444:911) — 흰 배경 #FFFFFF
+- **주간 하락:** wn-00 하락 (444:1057) — 다크 배경 #383838, 빨간 글로우
+
+### 전문가 전망 프레임 (wn-05)
+- 기관 전망/전문가 의견이 포함될 때 반드시 사용
+- 다크 배경 #383632, 2x2 카드 그리드
+- 카드: rgba(255,255,255,0.1), radius 37 (1080 기준)
+- 가격 텍스트: Montserrat ExtraBold 83px, 골드 그라디언트
 
 ### 콘텐츠 유형별 매핑
 
@@ -107,17 +126,31 @@ description: >
    │  │  ├─ Value (Pretendard Bold 48px, #333333)
    │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
    │  └─ ... (Card 2, Card 3 동일 구조)
-   ├─ Footer (1080x128, fill none, y=1312)
-   │  ├─ "Weekly" (Montserrat SemiBold 36px, #424242, opacity 0.2)
-   │  ├─ Divider (2x34, #424242, opacity 0.2)
-   │  └─ "금골디" (Montserrat Regular 36px, #424242, opacity 0.2)
+   ├─ Footer (1080x128, y=1312) ← 표준 Footer 참조
    └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
 ```
 
-### Title Section 생성
-- auto layout: VERTICAL, CENTER/CENTER, padding 112/40/120/120, gap 20
+### Title Section 생성 (Frame 1261157357)
+- auto layout: VERTICAL, CENTER/CENTER, padding **208**/62/125/125, gap 42 (1080 기준)
+- 520 기준 원본: padding 100/30/60/60, gap 20
+- **상단 패딩 208px (520 기준 100px)** — 이전 56px에서 변경됨
 - Pill Badge: auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40
 - **폰트 생성 후 반드시 `set_font_name`** — 기본 Inter 방지
+
+### 표준 Footer (1080x1440 프레임 공통)
+모든 1080x1440 콘텐츠 프레임에 동일하게 적용한다.
+```
+Footer (1080x128, position absolute, y=1312)
+├─ auto layout: HORIZONTAL, SPACE_BETWEEN, CENTER
+├─ padding: 30px 80px 40px
+├─ Footer Text Group (442x36, opacity 0.2, gap 28)
+│  ├─ "WEEKLY NEWS" (Montserrat SemiBold 36px, #424242)
+│  ├─ Divider (2x34, rgba(66,66,66,0.2))
+│  └─ "금골디" (Montserrat Regular 36px, #424242)
+└─ Logo Emblem (48x48, opacity 0.5)
+   └─ emblem vectors: #595446
+```
+- 다크 배경(wn-00 하락, wn-05 전문가) 프레임에서는 텍스트 #FFFFFF, divider #FFFFFF
 
 ### CTA Bar
 - **클로징 직전 마지막 콘텐츠 프레임에만** 적용
