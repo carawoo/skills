@@ -55,9 +55,11 @@ description: >
 
 ### 세트 구성
 
-**위클리:** wn-00(커버) → wn-01(그래프) → wn-02~04(카드 2~3장) → wn-05(전문가전망) → wn-07(클로징)
-**피드형:** Cover → Content(wn/faq 혼합) x2~4 → Closing
-**FAQ형:** faq-cover → faq-03/04/05 x2~3 → Closing
+**위클리:** wn-00(커버) → wn-01(그래프) → wn-02~04(카드 2~3장) → wn-05(전문가전망)
+**피드형:** Cover → Content(wn/faq 혼합) x2~4
+**FAQ형:** faq-cover → faq-03/04/05 x2~3
+
+> **클로징은 자동 생성하지 않는다.** 디자이너가 직접 추가.
 
 ### 위클리 커버 분기
 - **주간 상승:** wn-00 상승 (444:911) — 흰 배경 #FFFFFF
@@ -205,7 +207,7 @@ Frame 1261157395 (1080x870, bg #FFFFFF)
 ```
 
 ### CTA Bar
-- **클로징 직전 마지막 콘텐츠 프레임에만** 적용
+- **마지막 콘텐츠 프레임에만** 적용
 - position: absolute, x=1, y=1304
 
 ---
@@ -245,10 +247,8 @@ Frame 1261157395 (1080x870, bg #FFFFFF)
 - 비교형 카드 Desc: **#676767** (연한 회색)
 - 일반 카드 Desc: #333333 또는 #3741F2 (강조)
 
-### Closing — 반드시 wn-closing(601:6584) 클론
-- clone_node로 복제 — 직접 빌드 금지
-- Closing Description: **Pretendard Regular 44px** (#222222)
-- Component 2 SVG (171x258) 사이즈 변경 금지
+### Closing — 자동 생성 안 함
+- 클로징은 디자이너가 직접 추가 (자동 클론/빌드 금지)
 
 ### Cover Title
 - Line 1: Pretendard Variable Regular **90px**, #424242
@@ -331,7 +331,7 @@ Frame 1261157395 (1080x870, bg #FFFFFF)
 
 ## 산출물
 
-1. **Figma 프레임:** 커버 + 본문 2~4장 (wn+faq 혼합) + 클로징
+1. **Figma 프레임:** 커버 + 본문 2~4장 (wn+faq 혼합) — 클로징 제외
 2. **커버 이미지 제안:** 한 줄 키워드 (디자이너 소싱용)
 3. **인스타 캡션:** SEO 최적화
 4. **해시태그:** 5개
