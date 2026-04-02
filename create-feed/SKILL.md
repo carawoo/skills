@@ -147,11 +147,18 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
 │  │  │  └─ Step Card (동일 구조)
 │  │  └─ Step Card (920x340, full width, 동일 내부 구조)
 │  │
-│  │  **비교형 카드** (금시세 데이터 등 수치 비교 시):
-│  │  ├─ Card (fill parent, bg rgba(255,255,255,0.92), radius 60, padding 50/60, gap 16, VERTICAL CENTER, stroke 없음)
-│  │  │  ├─ Label (Pretendard Bold 34px, #424242)
-│  │  │  ├─ Value (Pretendard Bold 48px, #333333)
-│  │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
+│  │  **비교형 카드 컨테이너** (Frame 1261157364):
+│  │  - VERTICAL CENTER, padding **120**/120/20/20, gap **30**
+│  │  - W 1080, drop-shadow(0 2 10 rgba(174,128,0,0.1))
+│  │  ├─ Card Row (1000x460, HORIZONTAL, gap 20)
+│  │  │  ├─ Card (480x420, bg rgba(255,255,255,0.72), radius **37**, padding **80**/80/24/24, gap 20, VERTICAL SPACE_BETWEEN)
+│  │  │  │  ├─ Label (Pretendard Variable Bold 46px, #222222, CENTER)
+│  │  │  │  ├─ Divider (fill width, 1px solid #575757, opacity 0.2)
+│  │  │  │  └─ Value Area (fill width, VERTICAL CENTER, gap 6)
+│  │  │  │     ├─ Value (Montserrat ExtraBold 83px, #DF0000, CENTER)
+│  │  │  │     └─ Desc (Pretendard Variable Regular 31px, #222222, opacity 0.5, CENTER)
+│  │  │  └─ Card (동일 구조)
+│  │  └─ Bottom Text (Pretendard Variable Medium 33px, #424242, opacity 0.5)
 │  └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
 └─ **Footer (1080x128, y=1312, fill 없음)** ← 최상위 프레임 직속! Inner Frame 밖!
 ```
