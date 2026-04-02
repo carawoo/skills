@@ -150,6 +150,7 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
 ### Title Section 생성 (Frame 1261157357)
 - auto layout: VERTICAL, CENTER/CENTER, padding **80**/30/60/60, gap 20
 - **상단 패딩 80px** — 1080 기준 통일
+- **Title Text Group (Frame 1261157363):** VERTICAL, CENTER, gap **20** (10px 금지)
 - **위클리 헤더 타이틀: 80px** (1080x1440 프레임 전체 통일, 66px 금지)
 - **point/뱃지 내 텍스트: Pretendard Variable Medium 48px** (1080 기준, 38px/Bold 금지)
 - **point 박스: W, H 모두 Hug** (auto layout HORIZONTAL, CENTER/CENTER)
