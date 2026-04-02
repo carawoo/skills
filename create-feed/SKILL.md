@@ -128,33 +128,39 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
 
 ```
 최상위 프레임 (1080x1440, #FFFFFF)
-└─ Inner Frame (1080x1440, #FEFAEE, radius 80)
-   ├─ dim (하단 골드 그라디언트, 1080x680) ← z-index 0
-   ├─ Title Section (1080x408, fill none, y=0) ← z-index front
-   │  ├─ Pill Badge (#FCD15A, radius 50, auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40)
-   │  │  └─ 카테고리 (Pretendard Variable ExtraBold 36px, #424242)
-   │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
-   │  ├─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
-   │  └─ Subtitle (Pretendard Variable Regular 44px, #333333, width 920) ← wn 템플릿
-   ├─ Steps Section (1080x918, y=382, VERTICAL CENTER, padding 90/80, gap 20)
-   │  │  shadow: drop-shadow(0 2 10 rgba(174,128,0,0.1))
-   │  ├─ Row (920x378, HORIZONTAL, gap 20)
-   │  │  ├─ Step Card (450x378, #FFFFFF, radius 36, padding 50/40, gap 24, VERTICAL CENTER)
-   │  │  │  ├─ Badge (68x68, #DB6E00, radius 34, VERTICAL CENTER)
-   │  │  │  │  └─ 번호 (Pretendard Bold 38px, #FFFFFF)
-   │  │  │  ├─ Step Title (Pretendard Bold 40px, #222222, CENTER)
-   │  │  │  └─ Step Desc (Pretendard Regular 32px, #333333, CENTER)
-   │  │  └─ Step Card (동일 구조)
-   │  └─ Step Card (920x340, full width, 동일 내부 구조)
-   │
-   │  **비교형 카드** (금시세 데이터 등 수치 비교 시):
-   │  ├─ Card (fill parent, bg rgba(255,255,255,0.92), radius 60, padding 50/60, gap 16, VERTICAL CENTER, stroke 없음)
-   │  │  ├─ Label (Pretendard Bold 34px, #424242)
-   │  │  ├─ Value (Pretendard Bold 48px, #333333)
-   │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
-   ├─ Footer (1080x128, y=1312) ← 표준 Footer 참조
-   └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
+├─ Inner Frame (1080x1440, #FEFAEE, radius 80)
+│  ├─ dim (하단 골드 그라디언트, 1080x680) ← z-index 0
+│  ├─ Title Section (1080x408, fill none, y=0) ← z-index front
+│  │  ├─ Pill Badge (#FCD15A, radius 50, auto layout HORIZONTAL, CENTER/CENTER, padding 20/20/40/40)
+│  │  │  └─ 카테고리 (Pretendard Variable ExtraBold 36px, #424242)
+│  │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
+│  │  ├─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
+│  │  └─ Subtitle (Pretendard Variable Regular 44px, #333333, width 920) ← wn 템플릿
+│  ├─ Steps Section (1080x918, y=382, VERTICAL CENTER, padding 90/80, gap 20)
+│  │  │  shadow: drop-shadow(0 2 10 rgba(174,128,0,0.1))
+│  │  ├─ Row (920x378, HORIZONTAL, gap 20)
+│  │  │  ├─ Step Card (450x378, #FFFFFF, radius 36, padding 50/40, gap 24, VERTICAL CENTER)
+│  │  │  │  ├─ Badge (68x68, #DB6E00, radius 34, VERTICAL CENTER)
+│  │  │  │  │  └─ 번호 (Pretendard Bold 38px, #FFFFFF)
+│  │  │  │  ├─ Step Title (Pretendard Bold 40px, #222222, CENTER)
+│  │  │  │  └─ Step Desc (Pretendard Regular 32px, #333333, CENTER)
+│  │  │  └─ Step Card (동일 구조)
+│  │  └─ Step Card (920x340, full width, 동일 내부 구조)
+│  │
+│  │  **비교형 카드** (금시세 데이터 등 수치 비교 시):
+│  │  ├─ Card (fill parent, bg rgba(255,255,255,0.92), radius 60, padding 50/60, gap 16, VERTICAL CENTER, stroke 없음)
+│  │  │  ├─ Label (Pretendard Bold 34px, #424242)
+│  │  │  ├─ Value (Pretendard Bold 48px, #333333)
+│  │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
+│  └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
+└─ **Footer (1080x128, y=1312, fill 없음)** ← 최상위 프레임 직속! Inner Frame 밖!
 ```
+
+> **Footer 배치 절대 규칙:**
+> - Footer는 반드시 **최상위 프레임의 직속 자식**으로 배치 (Inner Frame 안에 넣지 않는다)
+> - Inner Frame의 auto layout/clip content에 의해 잘리는 것을 방지하기 위함
+> - fill: **없음** (투명), W: **1080**, H: **128**, absolute y=**1312**
+> - 모든 콘텐츠 프레임에 **반드시** Footer를 생성한다 (생략 금지)
 
 ### Title Section 생성 (Frame 1261157357)
 - auto layout: VERTICAL, CENTER/CENTER, padding **112**/40/120/120, gap 20
@@ -187,8 +193,9 @@ Footer (1080x226, position absolute, y=1214)
 ```
 - 다크 커버(하락)에서도 동일 (텍스트 #FFFFFF, 로고 골드)
 
-### 표준 Footer (1080x1440 프레임 공통)
-모든 1080x1440 콘텐츠 프레임에 동일하게 적용한다.
+### 표준 Footer (1080x1440 프레임 공통) — 필수 생성
+모든 1080x1440 콘텐츠 프레임에 **반드시** 동일하게 적용한다.
+**배치:** 최상위 프레임 직속 자식 (Inner Frame 밖), fill 없음, absolute.
 ```
 Footer (1080x128, position absolute, y=1312)
 ├─ auto layout: HORIZONTAL, SPACE_BETWEEN, CENTER
