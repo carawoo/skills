@@ -136,13 +136,22 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
    │  ├─ Title (Pretendard Variable ExtraBold 64px, CENTER, #424242, width 840)
    │  ├─ Tag (Pretendard Variable Medium 46px, CENTER, #424242, width 840)
    │  └─ Subtitle (Pretendard Variable Regular 44px, #333333, width 920) ← wn 템플릿
-   ├─ Cards Container (1080x~926, y=335, padding 0/60, gap 28, VERTICAL CENTER)
-   │  │  shadow: drop-shadow(0 8 20 rgba(237,146,43,0.2))
+   ├─ Steps Section (1080x918, y=382, VERTICAL CENTER, padding 90/80, gap 20)
+   │  │  shadow: drop-shadow(0 2 10 rgba(174,128,0,0.1))
+   │  ├─ Row (920x378, HORIZONTAL, gap 20)
+   │  │  ├─ Step Card (450x378, #FFFFFF, radius 36, padding 50/40, gap 24, VERTICAL CENTER)
+   │  │  │  ├─ Badge (68x68, #DB6E00, radius 34, VERTICAL CENTER)
+   │  │  │  │  └─ 번호 (Pretendard Bold 38px, #FFFFFF)
+   │  │  │  ├─ Step Title (Pretendard Bold 40px, #222222, CENTER)
+   │  │  │  └─ Step Desc (Pretendard Regular 32px, #333333, CENTER)
+   │  │  └─ Step Card (동일 구조)
+   │  └─ Step Card (920x340, full width, 동일 내부 구조)
+   │
+   │  **비교형 카드** (금시세 데이터 등 수치 비교 시):
    │  ├─ Card (fill parent, bg rgba(255,255,255,0.92), radius 60, padding 50/60, gap 16, VERTICAL CENTER, stroke 없음)
    │  │  ├─ Label (Pretendard Bold 34px, #424242)
    │  │  ├─ Value (Pretendard Bold 48px, #333333)
    │  │  └─ Desc (Pretendard Regular 38px, #676767, CENTER)
-   │  └─ ... (Card 2, Card 3 동일 구조)
    ├─ Footer (1080x128, y=1312) ← 표준 Footer 참조
    └─ CTA Bar (1078x136, #FFBE00, y=1304) ← 마지막 카드에만!
 ```
