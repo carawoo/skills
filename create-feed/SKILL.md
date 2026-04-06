@@ -201,7 +201,7 @@ Footer (1080x226, position absolute, y=1214)
 ├─ padding: 62px 125px 83px
 ├─ border-top: 1px solid rgba(255,255,255,0.15)
 ├─ Footer Text Group (442x36, gap 28)
-│  ├─ "WEEKLY REPORT" (Montserrat SemiBold 36px, #FFFFFF)
+│  ├─ "WEEKLY NEWS" (Montserrat SemiBold 36px, #FFFFFF)
 │  ├─ Divider (2x34, rgba(255,255,255,0.2))
 │  └─ "금골디" (Montserrat Regular 36px, #FFFFFF)
 └─ Logo Emblem (80x80)
