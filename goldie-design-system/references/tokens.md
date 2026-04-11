@@ -241,3 +241,21 @@ layout: horizontal(320px, rounded:16, 2열 버튼) / vertical(320px, rounded:16,
 ### Category
 - pill: selected(bg #000, B3/SB #FFF) / default(bg #FFF border #E5E5E5, B3/SB #737373)
 - height:38, rounded:999, padding 8 16
+
+## Spacing (DS CSS 검증 완료)
+
+4배수 기준, 예외적 값 최소화
+
+| Token | Value |
+|-------|-------|
+| spacing-0 | 0px |
+| spacing-20 | 2px |
+| spacing-40 | 4px |
+| spacing-80 | 8px |
+| spacing-120 | 12px |
+| spacing-160 | 16px |
+| spacing-200 | 20px |
+| spacing-240 | 24px |
+| spacing-320 | 32px |
+| spacing-400 | 40px |
+| spacing-600 | 60px |
