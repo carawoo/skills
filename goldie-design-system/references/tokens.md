@@ -179,3 +179,65 @@ Variants:
 
 Inner button: 60x36 bg #FFD664 rounded:8, B3/SB 14px #000
 Required marker: * B3/Reg #F53B32
+
+### MCP 연동 가이드 (Button_MCP)
+공통 네이밍: Variant → 그대로 props 매핑
+- Atomic 버튼: size/variant/state/leftIcon/rightIcon/BTN
+- Bottom 버튼: Atomic 버튼 조합, gradient bg, padding 20px
+- Select Box: variant/state/size + Boolean
+- Stepper: variant/size
+
+### Popup/Basic
+layout: horizontal(320px, rounded:16, 2열 버튼) / vertical(320px, rounded:16, 세로 버튼)
+- icon: 80x80 slot
+- title: H3/SB #000, center
+- subtitle: B2/Reg #737373, center
+- CTA: Secondary(#FFF7D8) + Primary(#FFD664), 각 136x50
+- textLink: B3/SB #A3A3A3 underline
+
+### Popup/BottomSheet
+- dim: rgba(0,0,0,0.4)
+- container: rounded:20 20 0 0, bg #FFF
+- header: header_defalt + ic/24/close
+- CTA: button/bottom (gradient bg, padding 20px, Atomic LARGE)
+
+### Toast
+- height:40, rounded:999, bg rgba(0,0,0,0.6), backdrop-filter blur(5px)
+- text: B3/SB #FFF, icon 24x24
+- variants: default/positive(#13C33B)/negative(#F53B32)/cautionary(#FFBE19)
+
+### Tooltip
+- bg: rgba(0,0,0,0.6), rounded:10, B3/Reg #FFF
+- positions: top/bottom × left/middle/right
+- close: ic/18/close #A3A3A3
+- arrow: 16x8 triangle same bg
+
+### Header (header_defalt)
+- 360x48, bg #FFF
+- variants: Default(Slot+Title+Frame), Popup(Title+close), Modal(Title+close), Opacity(transparent bg, white icons)
+- Title: B2/SB #000, center
+- Slot: 24x24 (ic/24/back, ic/24/blank)
+- Frame: text btn(B3/SB #A3A3A3) + ic/24 slots
+
+### header set
+- Status Safe Area(48) + header_defalt(48) = 96px total
+- StatusBar: light(#212121 icons) / dark(#FFF icons)
+
+### Bottom Navigation B2C
+- 360x72, bg #FFF, border-top #F5F5F5, shadow heavy, rounded:16 16 0 0
+- 5 tabs: 홈/MY금고/금모으기/내역/메뉴 (each 56x72)
+- active: icon filled #FFAA00, text #000 Caption/Med
+- inactive: icon stroke #737373, text #737373 Caption/Med
+- center FAB: 56x56 gradient gold, border 3px #FFF, shadow
+
+### Bottom Navigation B2B
+- 360x82, 3 tabs: 홈/채팅/MY스토어
+- text: B3/SB, active #000, inactive #737373
+
+### Tab
+- line underline: active #FFD664 4px, B2/SB #000 / inactive B2/Reg #A3A3A3
+- new dot: 4x4 #FF0000
+
+### Category
+- pill: selected(bg #000, B3/SB #FFF) / default(bg #FFF border #E5E5E5, B3/SB #737373)
+- height:38, rounded:999, padding 8 16
