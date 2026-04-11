@@ -274,3 +274,35 @@ layout: horizontal(320px, rounded:16, 2열 버튼) / vertical(320px, rounded:16,
 - divider-1: 리스트 아이템 사이 (1px solid)
 - divider-2: 가벼운 섹션 구분
 - divider-8: 주요 섹션 구분 (MY금고 홈 등)
+
+## Semantic Color — Text (CSS 검증 완료)
+
+| Token | HEX | 용도 |
+|-------|-----|------|
+| text/default | #000000 | 기본 본문 |
+| text/secondary | #404040 | 부제, 상세값 |
+| text/tertiary | #737373 | 보조, 라벨 |
+| text/quaternary | #A3A3A3 | 힌트, placeholder |
+| text/disabled | #D4D4D4 | 비활성 |
+| text/white | #FFFFFF | 반전 텍스트 |
+| text/primary | #FFD664 | 브랜드 텍스트 |
+| text/deepPrimary | #FFAA00 | 진한 브랜드 |
+| text/red | #F53B32 | 에러, 하락 |
+| text/green | #13C33B | 성공, 상승 |
+| text/blue | #2563EB | 하락 변동률 (MY금고) |
+| text/orange | #FB923C | 경고, 진행중 |
+
+## Shadow (CSS 검증 완료)
+
+| Token | Value |
+|-------|-------|
+| shadow/normal | 0px 4px 10px rgba(0,0,0,0.05), 0px 0px 2px rgba(0,0,0,0.1) |
+| shadow/strong | 0px 0px 4px rgba(0,0,0,0.04), 0px 1px 4px rgba(0,0,0,0.08), 0px 4px 10px rgba(0,0,0,0.1) |
+| shadow/heavy | 0px -4px 16px rgba(0,0,0,0.08) |
+
+## Opacity
+
+| Token | Value |
+|-------|-------|
+| dim | rgba(0,0,0,0.4) |
+| toast | rgba(0,0,0,0.6) + backdrop-filter blur(2px) |
