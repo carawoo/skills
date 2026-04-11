@@ -138,3 +138,44 @@ shadow/nomal, shadow/strong, shadow/heavy — 3단계
 - bg-secondary = **#FAFAFA** (gray-50), NOT #F5F5F5
 - status-positive = **#13C33B** (green-500)
 - status-negative = **#F53B32** (red-500) / text-red = #DF362E (red-600)
+
+## DS 컴포넌트 스펙
+
+### Atomic Button
+
+| Size | Height | Padding | Text Style | Icon Size | Radius |
+|------|--------|---------|-----------|----------|--------|
+| LARGE | 50px | 0 20px | B2/SB 16px #000 | 18x18 | 8px |
+| MEDIUM | 44px | 0 20px | B3/SB 14px #000 | 16x16 | 8px |
+| SMALL | 36px (min-w:60) | 0 12px | B3/SB 14px #000 | 16x16 | 8px |
+| XSMALL | 32px (min-w:54) | 0 12px | B3/SB 14px #000 | 16x16 | 8px |
+| XXSMALL | 24px | 4px 8px | Caption/Med 12px #000 | 16x16 | 999px |
+
+Variants:
+- Primary: bg #FFD664 / disabled bg #E5E5E5 text #FFF
+- Secondary: bg #FFF7D8 / disabled text #D4D4D4
+- Tertiary: bg #F5F5F5 / disabled text #D4D4D4
+- Quaternary: bg #FFF border #E5E5E5 / disabled text #D4D4D4
+
+### Text Field
+
+| Size | Input Height | Placeholder | Label | Guide |
+|------|-------------|-------------|-------|-------|
+| large | 50px | B2/Reg 16px | B3/Reg 14px #737373 | Caption/Reg 12px |
+| xlarge | 58px | B1/Reg 18px | B2/Reg 16px #737373 | B3/Reg 14px |
+
+States:
+- Inactive: border #E5E5E5
+- Focus: border #000000 + cursor
+- Typing: border #000000 + value #000
+- Finished: border #E5E5E5 + value #000
+- Disabled: border #E5E5E5, bg #F5F5F5, btn bg #E5E5E5 text #FFF
+
+Variants:
+- default: guide #737373
+- negative (line_color=red): border #F53B32, guide #F53B32
+- negative (line_color=gray): border #000/#E5E5E5, guide #F53B32
+- positive: guide #13C33B
+
+Inner button: 60x36 bg #FFD664 rounded:8, B3/SB 14px #000
+Required marker: * B3/Reg #F53B32
