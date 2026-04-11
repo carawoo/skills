@@ -259,3 +259,18 @@ layout: horizontal(320px, rounded:16, 2열 버튼) / vertical(320px, rounded:16,
 | spacing-320 | 32px |
 | spacing-400 | 40px |
 | spacing-600 | 60px |
+
+## Divider
+
+콘텐츠 간 구분선. 리스트/카드/섹션 구분에 사용.
+
+| Token | Height | Color Token | HEX |
+|-------|--------|------------|-----|
+| divider-1 | 1px | line-default(#D4D4D4) / line-secondary(#E5E5E5) / line-tertiary(#F5F5F5) | 선택 |
+| divider-2 | 2px | line-tertiary | #F5F5F5 |
+| divider-8 | 8px | line-tertiary | #F5F5F5 |
+
+용도:
+- divider-1: 리스트 아이템 사이 (1px solid)
+- divider-2: 가벼운 섹션 구분
+- divider-8: 주요 섹션 구분 (MY금고 홈 등)
