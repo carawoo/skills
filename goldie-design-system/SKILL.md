@@ -43,10 +43,21 @@ references/
 
 | 작업 | 로드할 파일 |
 |------|-----------|
-| 화면 디자인 | env.md + tokens.md + screens/{관련}.md |
+| 화면 디자인 (Stitch) | env.md + tokens.md + screens/{관련}.md + ~/.goldie/stitch-ds-prompt.md |
 | 컴포넌트 생성 | env.md + tokens.md + component-codegen.md |
 | 코드 출력 | 위 + screen-patterns.md |
 | 토큰 동기화 | env.md + tokens.md |
+
+## Stitch MCP 연동 (화면 디자인 필수)
+
+화면 디자인 작업 시 **반드시 Stitch MCP를 먼저 호출**하여 AI 디자인을 생성한다.
+Stitch가 시각적 완성도(레이아웃, 비율, 여백감)를 잡고, DS 토큰으로 정밀 보정하는 2단계 워크플로우.
+
+```
+Stitch 프롬프트 = DS 스펙(~/.goldie/stitch-ds-prompt.md) + 기획서 요구사항
+→ generate_screen_from_text → fetch_screen_image/code
+→ Figma MCP로 DS 토큰 정밀 적용
+```
 
 ## Figma MCP 연동
 
