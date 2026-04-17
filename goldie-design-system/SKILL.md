@@ -81,3 +81,10 @@ clone_node(nodeId) → insert_child(parentId, childId)
 2. **텍스트 스타일 바인딩** — 수동 fontSize/fontWeight 설정 금지
 3. **4배수 간격** — spacing 토큰 외 값 사용 최소화
 4. **컴포넌트 재사용** — 수동 프레임 생성 최소화, DS 컴포넌트 clone 우선
+
+## 작업 프로세스
+
+DS/Figma 변경 작업은 `memory/feedback_figma-design-rules.md` A섹션을 따른다.
+- **A-1 계획 보고**: 생성 전 Before/After + 토큰 사용 계획 필수
+- **A-2 완료 검증**: 하드코딩/토큰 동기화/컴포넌트 재사용 체크
+- **A-3 금지**: 무단 컴포넌트 생성, 범위 밖 리팩토링, 토큰 없는 스타일링
