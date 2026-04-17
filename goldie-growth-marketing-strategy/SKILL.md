@@ -102,12 +102,17 @@ Develop a phased Meta advertising approach:
 
 Develop a comprehensive Instagram presence:
 
-1. **Content Pillars** (weekly distribution):
-   - Success Stories & User Testimonials (2x/week)
-   - Educational Content & Tips (1x/week)
-   - Platform Updates & Features (1x/week)
-   - Behind-the-Scenes & Company Culture (1x/week)
-   - Interactive & Engagement Content (1x/week)
+1. **Content Pillars** (weekly distribution, 비율 기준):
+
+   | 필러 | 비율 | 유형 | 주간 빈도 |
+   |------|------|------|---------|
+   | 업계 인사이트 (금 시세/시장 분석) | 30% | 검색형(Searchable) | 2회 |
+   | 교육 (금 거래 방법/FAQ/비교) | 25% | 검색형+교육형 | 1~2회 |
+   | 비하인드 (팀 이야기/거래 과정) | 20% | 공유형(Shareable) | 1회 |
+   | 사용자 후기/성공 사례 | 15% | 공유형+전환형 | 1회 |
+   | 프로모션 (이벤트/신기능/CTA) | 10% | 전환형(Conversion) | 격주 1회 |
+
+   > 프로모션은 전체의 10% 이하로 유지. 프로모션 비율이 높으면 팔로워 이탈 가속.
 
 2. **Content Calendar**:
    - **Feed Posts**: 3-5 per week (Monday, Wednesday, Friday, Saturday, Sunday)
@@ -228,6 +233,21 @@ Establish ongoing measurement and optimization:
 6. **FOMO/Urgency**: "놓치면 안 될 금 모으기 기회"
 7. **Lifestyle**: "나의 금 자산 관리 일상"
 8. **Problem-Solution**: "금 거래의 불편함을 해결하다"
+
+### 5각도 변형 생성법 (Ad Creative Scaling)
+
+하나의 USP에서 5개 각도로 분해 → 각 각도 × 3 변형 = 15개 헤드라인 세트.
+상세 템플릿과 USP별 예시: `~/.claude/agents/marketer-ref-ad-creative.md` 참조.
+
+| 각도 | 접근법 | 금골디 표현 예시 |
+|------|--------|---------------|
+| 기능 | 제품이 하는 일 | "실시간 금 시세 비교, 한 화면에서" |
+| 혜택 | 사용자가 얻는 것 | "금은방마다 다른 가격, 한눈에 비교" |
+| 고통점 | 안 쓰면 겪는 불편 | "비교 없이 팔면 평균 3~5% 손해" |
+| 사회적 증거 | 다수의 선택 | "1,000명이 금골디로 더 좋은 가격 받았어요" |
+| 긴급성 | 지금 해야 할 이유 | "금값 역대 최고가 근접, 내 금 시세 확인" |
+
+이터레이션 루프: 1주차 15개 테스트 → 성과 집계 → 상위 2각도 확장 → 하위 교체
 
 ### Visual Asset Guidelines
 
