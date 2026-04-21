@@ -223,12 +223,46 @@ layout: horizontal(320px, rounded:16, 2열 버튼) / vertical(320px, rounded:16,
 - Status Safe Area(48) + header_defalt(48) = 96px total
 - StatusBar: light(#212121 icons) / dark(#FFF icons)
 
-### Bottom Navigation B2C
-- 360x72, bg #FFF, border-top #F5F5F5, shadow heavy, rounded:16 16 0 0
-- 5 tabs: 홈/MY금고/금모으기/내역/메뉴 (each 56x72)
-- active: icon filled #FFAA00, text #000 Caption/Med
-- inactive: icon stroke #737373, text #737373 Caption/Med
-- center FAB: 56x56 gradient gold, border 3px #FFF, shadow
+### Bottom Navigation B2C (CSS 검증 완료)
+```yaml
+container:
+  size: 360x72
+  bg: #FFFFFF
+  border: 1px solid #F5F5F5 (top+left+right only, bottom 없음)
+  shadow: 0px -4px 16px rgba(0,0,0,0.08)   # shadow/heavy
+  radius: 16 16 0 0
+  layout: flex row, justify space-between, padding 0 20px, gap 8px
+
+tabs: # 5개, 각 56x72
+  structure: flex column, align center, padding 8px 0px 10px, gap 4px
+  icon_area: 56x34 (icon 28x28 centered)
+  text: Caption/Medium (Pretendard 500, 12px/16px, letter-spacing -0.01em, center)
+
+  홈:
+    inactive: icon stroke #737373, text #737373
+    active: icon bg #FFBE19 (rounded:3), text #000000
+  MY금고:
+    inactive: icon stroke #737373, text #737373
+    active: icon filled #FFAA00 (border 1.2px #FFF, rounded:3), text #000000
+  금모으기: # 중앙 FAB
+    FAB: 56x56, radial-gradient(#FFF9E3→#FFE88C), border 3px #FFFFFF
+    FAB_shadow: 0px 4px 8px rgba(204,204,204,0.16)
+    FAB_position: top -12px (overlaps nav bar)
+    gold_bars: 15x9, linear-gradient(#FFCC40→#FFAA00), rounded 1.6px
+    text: #737373 (항상 inactive 색)
+  내역(거래내역):
+    inactive: icon stroke #737373, text #737373
+    active: icon filled, text #000000
+  메뉴:
+    inactive: icon stroke #737373 (3 horizontal lines, 1.4px), text #737373
+    active: icon #000000, text #000000
+
+variants: # 위치별 4종
+  위치=홈:     홈 active, 나머지 inactive
+  위치=MY금고:  MY금고 active, 나머지 inactive
+  위치=내역:   내역 active, 나머지 inactive
+  위치=메뉴:   메뉴 active, 나머지 inactive
+```
 
 ### Bottom Navigation B2B
 - 360x82, 3 tabs: 홈/채팅/MY스토어
