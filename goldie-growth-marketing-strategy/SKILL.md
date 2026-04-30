@@ -5,6 +5,29 @@ description: Comprehensive growth marketing strategy framework for fintech/gold 
 
 # Goldie Growth Marketing Strategy
 
+## 🚨 인블로그 자동 발행 9대 표준 (2026-04-30 우난경 확정 — 항시 적용)
+
+"인블로그 / 블로그 글 / SEO 글 / 발행글" 작업 요청 시 → 영구 룰 [`feedback_inblog-api-autosave-mandatory.md`](~/.claude/projects/-Users-goldie-growth/memory/feedback_inblog-api-autosave-mandatory.md) 자동 적용. 사용자 추가 지시 없이 모든 단계 자동.
+
+1. **UX writing 톤** — 초등학생 수준 풀어쓰기 (XAU/USD/FOMC/CPI/PBoC/VAT/KRX 모두 풀어 표기), 캐럿 통일, 외래어 지양, 권유형
+2. **최상단 SEO 형식** — H1+메타 디스크립션 150자+키워드 배치 표
+3. **시세 수치 전면 배제** — 가격·환율·등락률·기준금리 모두 미노출, "실시간 시세는 금골디 앱에서" 외부화
+4. **출처 섹션·inline `(출처:...)` 전면 배제** — 본문에 출처 노출 0건. 신뢰는 *기관명만* 본문 흐름 내 자연 통합. Tier-A 검증은 *내부 리서치 단계*에서 완료.
+5. **한글 4대 검수** — 오탈자/띄어쓰기/동사/의미
+6. **CTA 듀얼 슬롯 자동**
+   - 6-A. 글 상단 prominent CTA: post 메타 4개 필드 (`cta_text`, `cta_link`, `cta_color="#FCD564"`, `cta_text_color="#000000"`)
+   - 6-B. 본문 inline linkButton: 6개 data-* + inner `<a>` (보조)
+   - URL: `https://goldie-app.onelink.me/uD2H/f5nrv42i` (앱 다운로드 onelink)
+7. **API 임시저장**: `POST https://inblog.ai/api/v1/posts` — 새 글 attributes에 cta_* 4개 필드도 처음부터 함께 전송
+8. **예약 발행**: 사용자 시점 명시 시 `PATCH /posts/{id}/publish` action=schedule (KST→UTC)
+9. **발행 전 자동 검증**: 시세 배제·출처 배제·키워드 배치·CTA·예약 시각 전부 자동 점검
+
+**Tier-A 1차 출처 (인블로그 본문 인용 가능)**: gspublishing / jpmorgan / privatebank.jpmorgan / federalreserve / bls / gold.org / komsco / regulation.krx / goldgold / ecos.bok / lbma / nts.go.kr
+
+**금지 사항** (사용자 사후 지시 = 룰 위반): "검증했어?" / "쉽게 풀어써" / "시세 빼" / "출처 빼" / "버튼 추가" 후속 질문 발생
+
+---
+
 ## Overview
 
 This skill provides a structured methodology for developing growth marketing strategies for fintech and gold trading platforms. It combines Meta advertising optimization, Instagram content strategy, brand positioning, and performance marketing frameworks to drive user acquisition, activation, and retention while maintaining platform health and user satisfaction.
