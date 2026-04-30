@@ -221,6 +221,14 @@ center-contents (1080x850, padding 10/10/40/40, gap 30)
 - 그래프 컨테이너 (Frame 1261157381): paddingLeft 40, paddingRight 40
 - 전문가 카드 컨테이너 (Frame 1261157364 / center-contents): paddingLeft 40, paddingRight 40
 
+### Step 1·Step 2 카드 높이 = "H fill" (Fill container, vertical stretch) — 필수
+- Row 컨테이너 안의 Step 1·Step 2 카드는 **항상 height = Fill container** (Figma `layoutSizingVertical = STRETCH`, CSS `align-self: stretch`)
+- 이유: Row 높이가 변해도 두 카드가 같은 높이로 늘어나도록 보장. 텍스트 길이 차이로 카드 높이 어긋남 방지.
+- Row container: `display: flex; flex-direction: row; align-items: stretch; gap: 20; width: 920; height: 378` (height는 콘텐츠 따라 변할 수 있음)
+- Step 1·2 card: `align-self: stretch; flex: none; padding: 50/40; gap: 24; width: 450; background: #FFFFFF; radius: 36`
+- Step 3 card (full-width 단일): `width: 920; padding: 50/40; gap: 20; background: #FFFFFF; radius: 36`
+- 적용 방법: Figma에서 카드 선택 → 우측 패널 Auto layout → Resizing → height **Fill container** 선택
+
 ### 커버 Footer (wn-00 전용)
 커버 프레임에만 적용되는 별도 Footer. 일반 콘텐츠 Footer와 다름.
 ```
