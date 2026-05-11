@@ -9,10 +9,23 @@ description: >
 
 # Goldie Design System Library
 
+## 핵심 원칙 — 의도 명시 + 완전 커밋
+
+> Anthropic frontend-design SKILL의 "intentional aesthetic + full commit" 원칙 흡수 (2026-05-11 도입).
+
+모든 디자인은 **왜 이 톤인가**를 1줄로 선언한 뒤 시작한다. 절충·혼합·기본값 추격 금지. variant 정의 시 "이 variant는 어떤 상황에서 존재하는가"를 한 줄 명시.
+
+- ❌ "일단 무난하게 깔끔한 톤" — 제네릭 AI 결과물 패턴, 금지
+- ✅ "이번 주는 하락 주간이라 사용자가 즉시 알아채야 한다 → 다크 시그니처 커버"
+- ✅ "FAQ는 안내·신뢰가 1순위 → 크림 톤, 다크 커버 금지"
+
+→ **첫 단계는 항상 `references/tone-matrix.md` lookup.** screen-builder Phase 0 강제.
+
 ## 참조 파일 구조 (필요한 것만 Read)
 
 ```
 references/
+├── tone-matrix.md                # 콘텐츠 유형 → 톤 lookup (모든 화면/콘텐츠 작업 선행 필수)
 ├── tokens.md                     # DS 전체 토큰 + 컴포넌트 스펙
 │   ├── Color (Atomic + Semantic)
 │   ├── Typography (D1~Caption, 33 styles)
@@ -43,7 +56,8 @@ references/
 
 | 작업 | 로드할 파일 |
 |------|-----------|
-| 화면 디자인 (Stitch) | env.md + tokens.md + screens/{관련}.md + ~/.goldie/stitch-ds-prompt.md |
+| 화면 디자인 (Stitch) | **tone-matrix.md** + env.md + tokens.md + screens/{관련}.md + ~/.goldie/stitch-ds-prompt.md |
+| 카드뉴스/위클리/시즌 콘텐츠 | **tone-matrix.md** + tokens.md + (해당 시 reference_step-card-design 메모리) |
 | 컴포넌트 생성 | env.md + tokens.md + component-codegen.md |
 | 코드 출력 | 위 + screen-patterns.md |
 | 토큰 동기화 | env.md + tokens.md |
@@ -81,6 +95,8 @@ clone_node(nodeId) → insert_child(parentId, childId)
 2. **텍스트 스타일 바인딩** — 수동 fontSize/fontWeight 설정 금지
 3. **4배수 간격** — spacing 토큰 외 값 사용 최소화
 4. **컴포넌트 재사용** — 수동 프레임 생성 최소화, DS 컴포넌트 clone 우선
+5. **톤 사전 결정** — 작업 시작 전 `tone-matrix.md` lookup + 의도 1줄 선언 (screen-builder Phase 0 강제)
+6. **CVA variant 의도** — variant 정의 라인에 *왜 이 variant가 필요한가* 한 줄 주석 (남발 금지, variant 선언 줄에만)
 
 ## 작업 프로세스
 
