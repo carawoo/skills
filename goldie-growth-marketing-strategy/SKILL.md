@@ -5,9 +5,11 @@ description: Comprehensive growth marketing strategy framework for fintech/gold 
 
 # Goldie Growth Marketing Strategy
 
-## 🚨 인블로그 자동 발행 9대 표준 (2026-04-30 우난경 확정 — 항시 적용)
+## 🚨 인블로그 자동 발행 12+6대 표준 (2026-04-30 확정 + 2026-05-12 GEO 6대 추가 — 항시 적용)
 
-"인블로그 / 블로그 글 / SEO 글 / 발행글" 작업 요청 시 → 영구 룰 [`feedback_inblog-api-autosave-mandatory.md`](~/.claude/projects/-Users-goldie-growth/memory/feedback_inblog-api-autosave-mandatory.md) 자동 적용. 사용자 추가 지시 없이 모든 단계 자동.
+"인블로그 / 블로그 글 / SEO 글 / 발행글" 작업 요청 시 → 영구 룰 [`feedback_inblog-api-autosave-mandatory.md`](~/.claude/projects/-Users-goldie-growth/memory/feedback_inblog-api-autosave-mandatory.md) 자동 적용. 사용자 추가 지시 없이 모든 단계 자동. **카덴스: 화/금 10:00 KST**
+
+### 발행 운영 12대 표준
 
 1. **UX writing 톤** — 초등학생 수준 풀어쓰기 (XAU/USD/FOMC/CPI/PBoC/VAT/KRX 모두 풀어 표기), 캐럿 통일, 외래어 지양, 권유형
 2. **최상단 SEO 형식** — H1+메타 디스크립션 150자+키워드 배치 표
@@ -21,10 +23,41 @@ description: Comprehensive growth marketing strategy framework for fintech/gold 
 7. **API 임시저장**: `POST https://inblog.ai/api/v1/posts` — 새 글 attributes에 cta_* 4개 필드도 처음부터 함께 전송
 8. **예약 발행**: 사용자 시점 명시 시 `PATCH /posts/{id}/publish` action=schedule (KST→UTC)
 9. **발행 전 자동 검증**: 시세 배제·출처 배제·키워드 배치·CTA·예약 시각 전부 자동 점검
+10. **slug + 308 redirect 자동 갱신** — slug는 *영문 소문자+하이픈, ≤25자* 강제. PATCH slug 변경 시 `POST /redirects` 동반 필수.
+11. **title `[금골디]` prefix 자동** — 모든 글 제목에 `[금골디]` 접두사. no space.
+12. **블로그 썸네일 Figma 자동 생성·첨부** — 파는=`2038:1842` 보라 / 인사이트=`1994:2212` 오렌지, 800x450, post `thumbnail_url` 자동 PATCH. 헬퍼: `~/.goldie/inblog_helpers.py` (`create_post / update_slug_with_redirect / post_publish_check / attach_thumbnail_to_post`).
 
-**Tier-A 1차 출처 (인블로그 본문 인용 가능)**: gspublishing / jpmorgan / privatebank.jpmorgan / federalreserve / bls / gold.org / komsco / regulation.krx / goldgold / ecos.bok / lbma / nts.go.kr
+### GEO (생성형 AI 검색 최적화) 룰 13~18 (2026-05-12 추가)
 
-**금지 사항** (사용자 사후 지시 = 룰 위반): "검증했어?" / "쉽게 풀어써" / "시세 빼" / "출처 빼" / "버튼 추가" 후속 질문 발생
+기존 SEO 위에 ChatGPT search / Perplexity / Claude / Gemini / 네이버 AI 브리핑이 *인용*하도록 강화. 상세 본문 + 5건 글 리터치안 + 측정 시트 = [`~/Desktop/inblog-geo-guide.md`](~/Desktop/inblog-geo-guide.md) (458줄, Princeton GEO 논문·OmniBound·Yext 실측 근거) 또는 [`reference_inblog-geo-guide.md`](~/.claude/projects/-Users-goldie-growth/memory/reference_inblog-geo-guide.md).
+
+13. **첫 단락 = 질문 + 50자 이내 직접 답** — 자연어 질문 1개 + 50자 이내 명확한 답 (AI 인용 44.2%가 도입부에서 발생, Princeton/KDD 2024)
+14. **정의 문장 3~5개 박기** — "X는 Y입니다" 완결형 정의 문장 한 글당 3~5개. 단독 문단 또는 H3 바로 아래 배치 (AI 답변 흡수의 최강 단위)
+15. **기관명 + 연도 + 사실 조합** — 12대 #3·#4와 *수치 종류 분리*로 통합:
+    - **배제 유지** (12대 #3): 장중 시세·환율·매입가 등 매일 변하는 수치
+    - **강화** (GEO #15): 구조적 사실 수치 (금 한 돈 = 3.75g, WGC 2025 중앙은행 매입량 등)
+    - **금지 유지** (12대 #4): URL·`(출처: ...)` 표기
+    - **허용 패턴**: "세계금협회(WGC)가 2025년 공개한 보고서에 따르면, 중앙은행 금 순매입량은 2년 연속 1,000톤을 넘었습니다."
+16. **H2/H3 소제목 자연어 질문 형태** — 최소 2개를 독자가 AI 검색창에 입력할 질문 형태로 작성 (네이버 AI 브리핑·Perplexity 매칭)
+17. **본문 최소 3,000자** — 20,000자+ 페이지가 4.3배 더 인용 (OmniBound 2025). 단, 분량 채우기용 반복 금지 — 자연스러운 FAQ 섹션 추가로 보완
+18. **본문 상단 발행일·수정일 명시** — "발행: YYYY.MM.DD | 최종 수정: YYYY.MM.DD" 표기 필수 (최근 30일 콘텐츠가 3.2배 더 인용, OmniBound 2025)
+
+### 즉시 적용 5개 (난이도 낮음, 다음 발행분부터)
+1. 첫 단락 질문+답 (룰 13) — 글 맨 앞 2줄 추가
+2. 정의 문장 3개 박기 (룰 14) — 기존 문단에 1줄씩 추가
+3. H2 소제목 2개 질문 형태로 (룰 16) — 단어 변경만
+4. 발행일 상단 표기 (룰 18) — 1줄 추가
+5. 기관명+연도+사실 조합 (룰 15) — 문장 1~2개 추가
+
+**Tier-A 1차 출처 (인블로그 본문 *기관명만* 자연 통합, URL/inline 표기 금지)**: gspublishing / jpmorgan / privatebank.jpmorgan / federalreserve / bls / gold.org / komsco / regulation.krx / goldgold / ecos.bok / lbma / nts.go.kr / wgc(세계금협회)
+
+**금지 사항** (사용자 사후 지시 = 룰 위반): "검증했어?" / "쉽게 풀어써" / "시세 빼" / "출처 빼" / "버튼 추가" / "GEO 적용했어?" 후속 질문 발생
+
+### GEO 측정 방법
+- AI 검색 엔진에는 GSC 같은 무료 대시보드 없음 → **주간 수동 AI 쿼리** 5개 핵심 키워드 × 4개 AI 엔진(ChatGPT/Perplexity/Claude/Gemini) = 20셀 시트
+- 보조 지표: GSC 클릭·노출 + "금골디" 브랜드 쿼리 노출 추이 (weekly worker 자동 추적)
+- 목표: 2026-06-30까지 주간 AI 인용 3건+ 달성
+- 인블로그 GSC 자동 트래커: `~/.goldie/weekly-inblog-search-tracker.py` (월요일 09:30 KST)
 
 ---
 
@@ -611,5 +644,5 @@ Instagram's algorithm and Google's indexing both treat the **first 125 character
 
 ---
 
-**Last Updated**: 2026-03-23
-**Version**: 1.3
+**Last Updated**: 2026-05-12
+**Version**: 1.4 (인블로그 12+6대 표준 + GEO 룰 13~18 통합)
